@@ -138,6 +138,7 @@ public class TernaryTree implements Cloneable, Serializable {
     }
 
     public static void strcpy(char[] dst, int di, char[] src, int si) {
+        System.out.println("TEST");
         while (src[si] != 0) {
             dst[di++] = src[si++];
         }
@@ -145,6 +146,7 @@ public class TernaryTree implements Cloneable, Serializable {
     }
 
     public static int strlen(char[] a, int start) {
+        System.out.println("TEST");
         int len = 0;
         for (int i = start; i < a.length && a[i] != 0; i++) {
             len++;
@@ -157,6 +159,7 @@ public class TernaryTree implements Cloneable, Serializable {
     }
 
     protected void init() {
+        System.out.println("TEST");
         root = 0;
         freenode = 1;
         length = 0;
@@ -189,6 +192,7 @@ public class TernaryTree implements Cloneable, Serializable {
     }
 
     public void insert(char[] key, int start, char val) {
+        System.out.println("TEST");
         int len = strlen(key) + 1;
         if (freenode + len > eq.length) {
             redimNodeArrays(eq.length + BLOCK_SIZE);
@@ -200,6 +204,7 @@ public class TernaryTree implements Cloneable, Serializable {
      * The actual insertion function, recursive version.
      */
     private char insert(char p, char[] key, int start, char val) {
+        System.out.println("TEST");
         int len = strlen(key, start);
         if (p == 0) {
             // this means there is no branch, this node will start a new branch.

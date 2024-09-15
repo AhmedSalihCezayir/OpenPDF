@@ -147,6 +147,7 @@ public class Matrix {
      * @return the value at that specific position.
      */
     public float get(int index) {
+        System.out.println("TEST");
         return vals[index];
     }
 
@@ -158,6 +159,7 @@ public class Matrix {
      */
     @SuppressWarnings("Duplicates")
     public Matrix multiply(Matrix by) {
+        System.out.println("TEST");
         Matrix result = new Matrix();
 
         float[] a = vals;
@@ -184,6 +186,7 @@ public class Matrix {
      * @return the resulting matrix
      */
     public Matrix subtract(Matrix arg) {
+        System.out.println("TEST");
         Matrix result = new Matrix();
 
         float[] a = vals;
@@ -212,6 +215,7 @@ public class Matrix {
      */
     @Override
     public boolean equals(Object obj) {
+        System.out.println("TEST");
         if (!(obj instanceof Matrix)) {
             return false;
         }
@@ -243,6 +247,7 @@ public class Matrix {
      */
     @Override
     public String toString() {
+        System.out.println("TEST");
         return vals[I11] + "\t" + vals[I12] + "\t" + vals[I13] + "\n" +
                 vals[I21] + "\t" + vals[I22] + "\t" + vals[I13] + "\n" +
                 vals[I31] + "\t" + vals[I32] + "\t" + vals[I33];

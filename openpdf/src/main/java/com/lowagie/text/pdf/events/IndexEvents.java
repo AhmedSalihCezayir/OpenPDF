@@ -150,6 +150,7 @@ public class IndexEvents extends PdfPageEventHelper {
      * @return Returns the Chunk.
      */
     public Chunk create(final String text, final String in1) {
+        System.out.println("TEST");
         return create(text, in1, "", "");
     }
 
@@ -162,6 +163,7 @@ public class IndexEvents extends PdfPageEventHelper {
      * @return Returns the Chunk.
      */
     public Chunk create(final String text, final String in1, final String in2) {
+        System.out.println("TEST");
         return create(text, in1, in2, "");
     }
 
@@ -210,6 +212,7 @@ public class IndexEvents extends PdfPageEventHelper {
      * @param aComparator The comparator to set.
      */
     public void setComparator(Comparator<Entry> aComparator) {
+        System.out.println("TEST");
         comparator = aComparator;
     }
 
@@ -219,7 +222,7 @@ public class IndexEvents extends PdfPageEventHelper {
      * @return Returns the sorted list with the entries and the collected page numbers.
      */
     public List<Entry> getSortedEntries() {
-
+        System.out.println("TEST");
         Map<String, Entry> grouped = new HashMap<>();
 
         for (Entry e : indexentry) {
@@ -339,6 +342,7 @@ public class IndexEvents extends PdfPageEventHelper {
          * @return Returns the pagenumber for this entry.
          */
         public int getPageNumber() {
+            System.out.println("TEST");
             int rt = -1;
             Integer i = indextag.get(tag);
             if (i != null) {

@@ -40,6 +40,7 @@ public class TextRenderingOptions {
     public TextRenderingOptions(String documentLanguage, boolean glyphSubstitutionEnabled) {
         this.documentLanguage = documentLanguage;
         this.glyphSubstitutionEnabled = glyphSubstitutionEnabled;
+        System.out.println("TEST");
     }
 
     /**
@@ -51,6 +52,7 @@ public class TextRenderingOptions {
      * @return the current document language
      */
     public String getDocumentLanguage() {
+        System.out.println("TEST");
         return documentLanguage;
     }
 
@@ -61,6 +63,7 @@ public class TextRenderingOptions {
      * @see #getDocumentLanguage()
      */
     public void setDocumentLanguage(String documentLanguage) {
+        System.out.println("TEST");
         this.documentLanguage = documentLanguage;
     }
 
@@ -70,6 +73,7 @@ public class TextRenderingOptions {
      * @return the glyph substitution enabled flag #see {@link Document#setGlyphSubstitutionEnabled(boolean)}
      */
     public boolean isGlyphSubstitutionEnabled() {
+        System.out.println("TEST");
         return glyphSubstitutionEnabled;
     }
 
@@ -79,6 +83,7 @@ public class TextRenderingOptions {
      * @param glyphSubstitutionEnabled whether glyph substitution is enabled
      */
     public void setGlyphSubstitutionEnabled(boolean glyphSubstitutionEnabled) {
+        System.out.println("TEST");
         this.glyphSubstitutionEnabled = glyphSubstitutionEnabled;
     }
 }

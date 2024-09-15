@@ -80,6 +80,7 @@ public class ZapfDingbatsNumberList extends List {
      * @param symbolIndent indent
      */
     public ZapfDingbatsNumberList(int type, int symbolIndent) {
+        System.out.println("TEST");
         super(true, symbolIndent);
         this.type = type;
         float fontsize = symbol.getFont().getSize();
@@ -93,6 +94,7 @@ public class ZapfDingbatsNumberList extends List {
      * @return char-number
      */
     public int getType() {
+        System.out.println("TEST");
         return type;
     }
 
@@ -102,6 +104,7 @@ public class ZapfDingbatsNumberList extends List {
      * @param type {@link ZapfDingbatsNumberList#type}
      */
     public void setType(int type) {
+        System.out.println("TEST");
         this.type = type;
     }
 
@@ -113,6 +116,7 @@ public class ZapfDingbatsNumberList extends List {
      */
     @Override
     public boolean add(Element o) {
+        System.out.println("TEST");
         if (o instanceof ListItem) {
             ListItem item = (ListItem) o;
             Chunk chunk = new Chunk(preSymbol, symbol.getFont());
@@ -151,6 +155,7 @@ public class ZapfDingbatsNumberList extends List {
      */
     @Override
     public boolean add(String s) {
+        System.out.println("TEST");
         return this.add(new ListItem(s));
     }
 }

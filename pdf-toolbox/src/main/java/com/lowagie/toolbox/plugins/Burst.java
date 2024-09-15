@@ -161,6 +161,7 @@ public class Burst extends AbstractTool {
      * @see com.lowagie.toolbox.AbstractTool#valueHasChanged(com.lowagie.toolbox.arguments.AbstractArgument)
      */
     public void valueHasChanged(AbstractArgument arg) {
+        System.out.println("TEST");
         if (internalFrame == null) {
             // if the internal frame is null, the tool was called from the command line
             return;

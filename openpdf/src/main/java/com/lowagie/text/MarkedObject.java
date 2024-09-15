@@ -93,6 +93,7 @@ public class MarkedObject implements Element {
      * @return an <CODE>ArrayList</CODE>
      */
     public ArrayList<Element> getChunks() {
+        System.out.println("TEST");
         return element.getChunks();
     }
 
@@ -104,6 +105,7 @@ public class MarkedObject implements Element {
      * @return <CODE>true</CODE> if the element was processed successfully
      */
     public boolean process(ElementListener listener) {
+        System.out.println("TEST");
         try {
             return listener.add(element);
         } catch (DocumentException de) {
@@ -117,6 +119,7 @@ public class MarkedObject implements Element {
      * @return a type
      */
     public int type() {
+        System.out.println("TEST");
         return MARKED;
     }
 
@@ -125,6 +128,7 @@ public class MarkedObject implements Element {
      * @since iText 2.0.8
      */
     public boolean isContent() {
+        System.out.println("TEST");
         return true;
     }
 
@@ -152,6 +156,7 @@ public class MarkedObject implements Element {
      * @param value attribute's value
      */
     public void setMarkupAttribute(String key, String value) {
+        System.out.println("TEST");
         markupAttributes.setProperty(key, value);
     }
 

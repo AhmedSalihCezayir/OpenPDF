@@ -130,6 +130,7 @@ public class PdfReaderController extends Observable implements Observer {
      * @return the PdfTree object
      */
     public PdfTree getPdfTree() {
+        System.out.println("TEST");
         return pdfTree;
     }
 
@@ -139,6 +140,7 @@ public class PdfReaderController extends Observable implements Observer {
      * @return a JTabbedPane
      */
     public JTabbedPane getNavigationTabs() {
+        System.out.println("TEST");
         return navigationTabs;
     }
 
@@ -176,6 +178,7 @@ public class PdfReaderController extends Observable implements Observer {
      * @param file the wrapper object that holds the PdfReader as member variable
      */
     public void startObjectLoader(PdfFile file) {
+        System.out.println("TEST");
         setChanged();
         notifyObservers();
         setChanged();
@@ -191,6 +194,7 @@ public class PdfReaderController extends Observable implements Observer {
      */
     @Override
     public void notifyObservers(Object obj) {
+        System.out.println("TEST");
         if (obj instanceof ObjectLoader loader) {
             nodes = loader.getNodes();
             PdfTrailerTreeNode root = pdfTree.getRoot();
@@ -207,6 +211,7 @@ public class PdfReaderController extends Observable implements Observer {
      * @param node a node in the PdfTree
      */
     public void selectNode(PdfObjectTreeNode node) {
+        System.out.println("TEST");
         pdfTree.selectNode(node);
     }
 

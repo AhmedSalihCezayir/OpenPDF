@@ -144,6 +144,7 @@ public class Permissions {
      * @return true if printing is allowed
      */
     public boolean isAllowPrinting() {
+        System.out.println("TEST");
         return
                 !encrypted
                         || (PdfWriter.ALLOW_PRINTING & permissions) == PdfWriter.ALLOW_PRINTING;
@@ -156,6 +157,7 @@ public class Permissions {
      * @return true if modifying contents is allowed
      */
     public boolean isAllowModifyContents(boolean decrypted) {
+        System.out.println("TEST");
         return
                 !encrypted
                         || (PdfWriter.ALLOW_MODIFY_CONTENTS & permissions) == PdfWriter.ALLOW_MODIFY_CONTENTS;
@@ -168,6 +170,7 @@ public class Permissions {
      * @return true if copying is allowed
      */
     public boolean isAllowCopy(boolean decrypted) {
+        System.out.println("TEST");
         return
                 !encrypted
                         || (PdfWriter.ALLOW_COPY & permissions) == PdfWriter.ALLOW_COPY;
@@ -179,6 +182,7 @@ public class Permissions {
      * @return true if modifying annotations is allowed
      */
     public boolean isAllowModifyAnnotations() {
+        System.out.println("TEST");
         return
                 !encrypted
                         || (PdfWriter.ALLOW_MODIFY_ANNOTATIONS & permissions) == PdfWriter.ALLOW_MODIFY_ANNOTATIONS;
@@ -190,6 +194,7 @@ public class Permissions {
      * @return true if filling in forms is allowed
      */
     public boolean isAllowFillIn() {
+        System.out.println("TEST");
         return
                 !encrypted
                         || (PdfWriter.ALLOW_FILL_IN & permissions) == PdfWriter.ALLOW_FILL_IN;

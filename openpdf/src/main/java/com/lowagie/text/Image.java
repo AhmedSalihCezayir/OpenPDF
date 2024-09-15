@@ -469,6 +469,7 @@ public abstract class Image extends Rectangle {
      */
     public static Image getInstance(URL url) throws BadElementException,
             IOException {
+        System.out.println("TEST");
         InputStream is = null;
         Image img = null;
         try {
@@ -548,6 +549,7 @@ public abstract class Image extends Rectangle {
      */
     public static Image getInstance(String filename)
             throws BadElementException, IOException {
+        System.out.println("TEST");
         return getInstance(Utilities.toURL(filename));
     }
 
@@ -562,6 +564,7 @@ public abstract class Image extends Rectangle {
      */
     public static Image getInstanceFromClasspath(String filename)
             throws BadElementException, IOException {
+        System.out.println("TEST");
         URL url = Image.class.getResource("/" + filename);
         return getInstance(url);
     }
@@ -576,6 +579,7 @@ public abstract class Image extends Rectangle {
      */
     public static Image getInstance(byte[] imgb) throws BadElementException,
             IOException {
+        System.out.println("TEST");
         InputStream is = null;
         try {
             is = new java.io.ByteArrayInputStream(imgb);
@@ -646,6 +650,7 @@ public abstract class Image extends Rectangle {
      */
     public static Image getInstance(int width, int height, int components,
             int bpc, byte[] data) throws BadElementException {
+        System.out.println("TEST");
         return Image.getInstance(width, height, components, bpc, data, null);
     }
 

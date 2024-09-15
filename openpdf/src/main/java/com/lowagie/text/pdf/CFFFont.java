@@ -334,6 +334,7 @@ public class CFFFont {
 
     //private String[] strings;
     public String getString(char sid) {
+        System.out.println("TEST");
         if (sid < standardStrings.length) {
             return standardStrings[sid];
         }
@@ -353,6 +354,7 @@ public class CFFFont {
     }
 
     char getCard8() {
+        System.out.println("TEST");
         try {
             byte i = buf.readByte();
             return (char) (i & 0xff);
@@ -362,6 +364,7 @@ public class CFFFont {
     }
 
     char getCard16() {
+        System.out.println("TEST");
         try {
             return buf.readChar();
         } catch (Exception e) {
@@ -370,6 +373,7 @@ public class CFFFont {
     }
 
     int getOffset(int offSize) {
+        System.out.println("TEST");
         int offset = 0;
         for (int i = 0; i < offSize; i++) {
             offset *= 256;
@@ -395,6 +399,7 @@ public class CFFFont {
     }
 
     int getInt() {
+        System.out.println("TEST");
         try {
             return buf.readInt();
         } catch (Exception e) {

@@ -327,6 +327,7 @@ public class Barcode128 extends Barcode {
      * @return the cleaned text
      */
     public static String removeFNC1(String code) {
+        System.out.println("TEST");
         int len = code.length();
         StringBuilder buf = new StringBuilder(len);
         for (int k = 0; k < len; ++k) {
@@ -345,6 +346,7 @@ public class Barcode128 extends Barcode {
      * @return the human readable text
      */
     public static String getHumanReadableUCCEAN(String code) {
+        System.out.println("TEST");
         StringBuilder buf = new StringBuilder();
         String fnc1 = String.valueOf(FNC1);
         try {
@@ -402,6 +404,7 @@ public class Barcode128 extends Barcode {
      * @return the check result
      */
     static boolean isNextDigits(String text, int textIndex, int numDigits) {
+        System.out.println("TEST");
         int len = text.length();
         while (textIndex < len && numDigits > 0) {
             if (text.charAt(textIndex) == FNC1) {
@@ -432,6 +435,7 @@ public class Barcode128 extends Barcode {
      * @return the packed digits, two digits per character
      */
     static String getPackedRawDigits(String text, int textIndex, int numDigits) {
+        System.out.println("TEST");
         String out = "";
         int start = textIndex;
         while (numDigits > 0) {
@@ -458,6 +462,7 @@ public class Barcode128 extends Barcode {
      * @return the code ready to be fed to getBarsCode128Raw()
      */
     public static String getRawText(String text, boolean ucc) {
+        System.out.println("TEST");
         String out = "";
         int tLen = text.length();
         if (tLen == 0) {

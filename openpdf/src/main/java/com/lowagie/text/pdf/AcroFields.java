@@ -180,6 +180,7 @@ public class AcroFields {
     }
 
     public static Object[] splitDAelements(String da) {
+        System.out.println("TEST");
         try {
             PRTokeniser tk = new PRTokeniser(PdfEncodings.convertToBytes(da, null));
             List<String> stack = new ArrayList<>();
@@ -241,7 +242,7 @@ public class AcroFields {
      * @return AWT-Color
      */
     public static Color parseColor(PdfArray pdfColor) {
-
+        System.out.println("TEST");
         //Check for no color -> thus transparent
         if (pdfColor != null && !pdfColor.isEmpty()) {
             if (pdfColor.size() == 1) {
@@ -276,6 +277,7 @@ public class AcroFields {
     }
 
     void fill() {
+        System.out.println("TEST");
         fields = new HashMap<>();
         PdfDictionary top = (PdfDictionary) PdfReader.getPdfObjectReleaseNullConverting(
                 reader.getCatalog().get(PdfName.ACROFORM));
@@ -611,6 +613,7 @@ public class AcroFields {
      * @return the field type
      */
     public int getFieldType(String fieldName) {
+        System.out.println("TEST");
         Item fd = getFieldItem(fieldName);
         if (fd == null) {
             return FIELD_TYPE_NONE;
@@ -654,6 +657,7 @@ public class AcroFields {
      * @param writer the FDF writer
      */
     public void exportAsFdf(FdfWriter writer) {
+        System.out.println("TEST");
         for (Map.Entry<String, Item> entry : fields.entrySet()) {
             Item item = entry.getValue();
             String name = entry.getKey();

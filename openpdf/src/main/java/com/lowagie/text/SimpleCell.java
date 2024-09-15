@@ -170,6 +170,7 @@ public class SimpleCell extends Rectangle implements PdfPCellEvent, TextElementA
      * @throws BadElementException on error
      */
     public void addElement(Element element) throws BadElementException {
+        System.out.println("TEST");
         if (cellgroup) {
             if (element instanceof SimpleCell) {
                 if (((SimpleCell) element).isCellgroup()) {
@@ -211,6 +212,7 @@ public class SimpleCell extends Rectangle implements PdfPCellEvent, TextElementA
      * @throws BadElementException on error
      */
     public Cell createCell(SimpleCell rowAttributes) throws BadElementException {
+        System.out.println("TEST");
         Cell cell = new Cell();
         cell.cloneNonPositionParameters(rowAttributes);
         cell.softCloneNonPositionParameters(this);
@@ -237,6 +239,7 @@ public class SimpleCell extends Rectangle implements PdfPCellEvent, TextElementA
      * @return a PdfPCell based on these attributes.
      */
     public PdfPCell createPdfPCell(SimpleCell rowAttributes) {
+        System.out.println("TEST");
         PdfPCell cell = new PdfPCell();
         cell.setBorder(NO_BORDER);
         SimpleCell tmp = new SimpleCell(CELL);
@@ -318,6 +321,7 @@ public class SimpleCell extends Rectangle implements PdfPCellEvent, TextElementA
      * com.lowagie.text.pdf.PdfContentByte[])
      */
     public void cellLayout(PdfPCell cell, Rectangle position, PdfContentByte[] canvases) {
+        System.out.println("TEST");
         float sp_left = spacing_left;
         if (Float.isNaN(sp_left)) {
             sp_left = 0f;
@@ -348,6 +352,7 @@ public class SimpleCell extends Rectangle implements PdfPCellEvent, TextElementA
      * @param padding padding that will be set
      */
     public void setPadding(float padding) {
+        System.out.println("TEST");
         if (Float.isNaN(padding_right)) {
             setPadding_right(padding);
         }

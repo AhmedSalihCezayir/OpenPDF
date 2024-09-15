@@ -244,6 +244,7 @@ public class Document implements DocListener {
     }
 
     private static String getVersionNumber() {
+        System.out.println("TEST");
         String releaseVersion = "UNKNOWN";
         try (InputStream input = Document.class.getClassLoader()
                 .getResourceAsStream(VERSION_PROPERTIES)) {
@@ -267,6 +268,7 @@ public class Document implements DocListener {
      * @since 2.1.6
      */
     public static String getProduct() {
+        System.out.println("TEST");
         return OPENPDF;
     }
 
@@ -277,6 +279,7 @@ public class Document implements DocListener {
      * @since 2.1.6
      */
     public static String getRelease() {
+        System.out.println("TEST");
         return RELEASE;
     }
 
@@ -288,6 +291,7 @@ public class Document implements DocListener {
      * @return iText version
      */
     public static String getVersion() {
+        System.out.println("TEST");
         return OPENPDF_VERSION;
     }
 
@@ -398,6 +402,7 @@ public class Document implements DocListener {
      */
     public boolean setMargins(float marginLeft, float marginRight,
             float marginTop, float marginBottom) {
+        System.out.println("TEST");
         this.marginLeft = marginLeft;
         this.marginRight = marginRight;
         this.marginTop = marginTop;

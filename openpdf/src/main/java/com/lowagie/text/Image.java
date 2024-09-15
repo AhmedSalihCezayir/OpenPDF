@@ -576,6 +576,7 @@ public abstract class Image extends Rectangle {
      */
     public static Image getInstance(byte[] imgb) throws BadElementException,
             IOException {
+        System.out.println("TEST");
         InputStream is = null;
         try {
             is = new java.io.ByteArrayInputStream(imgb);
@@ -701,6 +702,7 @@ public abstract class Image extends Rectangle {
     public static Image getInstance(int width, int height, boolean reverseBits,
             int typeCCITT, int parameters, byte[] data, int[] transparency)
             throws BadElementException {
+        System.out.println("TEST");
         if (transparency != null && transparency.length != 2) {
             throw new BadElementException(
                     MessageLocalization.getComposedMessage("transparency.length.must.be.equal.to.2.with.ccitt.images"));
@@ -1049,6 +1051,7 @@ public abstract class Image extends Rectangle {
      * @return a new serial id
      */
     static protected synchronized Long getSerialId() {
+        System.out.println("TEST");
         ++serialId;
         return serialId;
     }
@@ -1059,6 +1062,7 @@ public abstract class Image extends Rectangle {
      * @return Value of property directReference.
      */
     public PdfIndirectReference getDirectReference() {
+        System.out.println("TEST");
         return this.directReference;
     }
 
@@ -1540,6 +1544,7 @@ public abstract class Image extends Rectangle {
      * @param f right indentation
      */
     public void setIndentationRight(float f) {
+        System.out.println("TEST");
         indentationRight = f;
     }
 

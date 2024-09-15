@@ -137,6 +137,7 @@ public class Row implements Element, WithHorizontalAlignment {
      * @return <CODE>true</CODE> if the element was processed successfully
      */
     public boolean process(ElementListener listener) {
+        System.out.println("TEST");
         try {
             return listener.add(this);
         } catch (DocumentException de) {
@@ -150,6 +151,7 @@ public class Row implements Element, WithHorizontalAlignment {
      * @return a type
      */
     public int type() {
+        System.out.println("TEST");
         return Element.ROW;
     }
 
@@ -159,6 +161,7 @@ public class Row implements Element, WithHorizontalAlignment {
      * @return an <CODE>ArrayList</CODE>
      */
     public ArrayList<Element> getChunks() {
+        System.out.println("TEST");
         return new ArrayList<>();
     }
 
@@ -167,6 +170,7 @@ public class Row implements Element, WithHorizontalAlignment {
      * @since iText 2.0.8
      */
     public boolean isContent() {
+        System.out.println("TEST");
         return true;
     }
 
@@ -175,6 +179,7 @@ public class Row implements Element, WithHorizontalAlignment {
      * @since iText 2.0.8
      */
     public boolean isNestable() {
+        System.out.println("TEST");
         return false;
     }
 

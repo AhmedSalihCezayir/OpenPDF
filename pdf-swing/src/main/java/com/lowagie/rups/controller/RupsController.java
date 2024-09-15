@@ -122,6 +122,7 @@ public class RupsController extends Observable
      * @return the menubar
      */
     public RupsMenuBar getMenuBar() {
+        System.out.println("TEST");
         return menuBar;
     }
 
@@ -131,6 +132,7 @@ public class RupsController extends Observable
      * @return the master component
      */
     public Component getMasterComponent() {
+        System.out.println("TEST");
         return masterComponent;
     }
 
@@ -141,6 +143,7 @@ public class RupsController extends Observable
      */
     @Override
     public void notifyObservers(Object obj) {
+        System.out.println("TEST");
         if (obj instanceof FileChooserAction) {
             File file = ((FileChooserAction) obj).getFile();
             try {
@@ -167,6 +170,7 @@ public class RupsController extends Observable
      * @see javax.swing.event.TreeSelectionListener#valueChanged(javax.swing.event.TreeSelectionEvent)
      */
     public void valueChanged(TreeSelectionEvent evt) {
+        System.out.println("TEST");
         Object selectednode = readerController.getPdfTree().getLastSelectedPathComponent();
         if (selectednode instanceof PdfTrailerTreeNode) {
             menuBar.update(this, RupsMenuBar.FILE_MENU);
@@ -183,6 +187,7 @@ public class RupsController extends Observable
      * @see com.lowagie.rups.view.PageSelectionListener#gotoPage(int)
      */
     public int gotoPage(int pageNumber) {
+        System.out.println("TEST");
         readerController.gotoPage(pageNumber);
         return pageNumber;
     }

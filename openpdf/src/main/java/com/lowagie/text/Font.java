@@ -298,6 +298,7 @@ public class Font implements Comparable {
      * @return the corresponding index
      */
     public static int getFamilyIndex(String family) {
+        System.out.println("TEST");
         if (family.equalsIgnoreCase(FontFactory.COURIER)) {
             return COURIER;
         }
@@ -330,6 +331,7 @@ public class Font implements Comparable {
      * @return the styles of an already styled font.
      */
     public static int getFontStyleFromName(final String fontName) {
+        System.out.println("TEST");
         String lowerCaseFontName = fontName.toLowerCase(Locale.ROOT);
 
         int fontStyle = Font.NORMAL;
@@ -350,6 +352,7 @@ public class Font implements Comparable {
      * @return the corresponding value
      */
     public static int getStyleValue(String style) {
+        System.out.println("TEST");
         int s = 0;
         if (style.contains(Markup.CSS_VALUE_NORMAL)) {
             s |= NORMAL;
@@ -379,6 +382,7 @@ public class Font implements Comparable {
      * @return a value
      */
     public int compareTo(Object object) {
+        System.out.println("TEST");
         if (object == null) {
             return -1;
         }
@@ -442,6 +446,7 @@ public class Font implements Comparable {
      * @return the familyname
      */
     public String getFamilyname() {
+        System.out.println("TEST");
         String tmp = "unknown";
         switch (getFamily()) {
             case Font.COURIER:

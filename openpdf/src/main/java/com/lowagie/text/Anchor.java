@@ -190,6 +190,7 @@ public class Anchor extends Phrase {
      * @return <CODE>true</CODE> if the element was processed successfully
      */
     public boolean process(ElementListener listener) {
+        System.out.println("TEST");
         try {
             Chunk chunk;
             Iterator i = getChunks().iterator();
@@ -218,6 +219,7 @@ public class Anchor extends Phrase {
      * @return an <CODE>ArrayList</CODE>
      */
     public ArrayList<Element> getChunks() {
+        System.out.println("TEST");
         ArrayList<Element> tmp = new ArrayList<>();
         Chunk chunk;
         Iterator<Element> i = iterator();
@@ -245,6 +247,7 @@ public class Anchor extends Phrase {
      * @return a type
      */
     public int type() {
+        System.out.println("TEST");
         return Element.ANCHOR;
     }
 
@@ -256,6 +259,7 @@ public class Anchor extends Phrase {
      * @return a name
      */
     public String getName() {
+        System.out.println("TEST");
         return name;
     }
 
@@ -294,6 +298,7 @@ public class Anchor extends Phrase {
      * @return an <CODE>URL</CODE>
      */
     public URL getUrl() {
+        System.out.println("TEST");
         try {
             return new URL(reference);
         } catch (MalformedURLException mue) {

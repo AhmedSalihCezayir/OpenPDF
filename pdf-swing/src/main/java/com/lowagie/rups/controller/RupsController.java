@@ -141,6 +141,7 @@ public class RupsController extends Observable
      */
     @Override
     public void notifyObservers(Object obj) {
+        System.out.println("TEST");
         if (obj instanceof FileChooserAction) {
             File file = ((FileChooserAction) obj).getFile();
             try {

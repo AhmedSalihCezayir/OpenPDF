@@ -183,6 +183,7 @@ public class FontFactoryImp implements FontProvider {
      */
     public Font getFont(String fontname, String encoding, boolean embedded, float size, int style,
             Color color, boolean cached) {
+        System.out.println("TEST");
         if (fontname == null) {
             return new Font(Font.UNDEFINED, size, style, color);
         }

@@ -81,10 +81,12 @@ public class Word extends ParsedTextImpl {
     }
 
     private static String formatPercent(float f) {
+        System.out.println("TEST");
         return String.format("%.2f%%", f);
     }
 
     private static String escapeHTML(String s) {
+        System.out.println("TEST");
         return s.replaceAll("&", "&amp;").replaceAll("<", "&lt;")
                 .replaceAll(">", "&gt;");
     }
@@ -99,6 +101,7 @@ public class Word extends ParsedTextImpl {
      */
     @Override
     public void accumulate(TextAssembler p, String contextName) {
+        System.out.println("TEST");
         p.process(this, contextName);
     }
 
@@ -111,6 +114,7 @@ public class Word extends ParsedTextImpl {
      */
     @Override
     public void assemble(TextAssembler p) {
+        System.out.println("TEST");
         p.renderText(this);
     }
 
@@ -125,6 +129,7 @@ public class Word extends ParsedTextImpl {
      * @return markup to represent this one word.
      */
     private String wordMarkup(String text, PdfReader reader, int page, TextAssembler assembler) {
+        System.out.println("TEST");
         if (text == null) {
             return "";
         }

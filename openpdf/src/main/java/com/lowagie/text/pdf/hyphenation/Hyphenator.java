@@ -64,6 +64,7 @@ public class Hyphenator {
      */
     public static HyphenationTree getHyphenationTree(String lang,
             String country) {
+        System.out.println("TEST");
         String key = lang;
         // check whether the country code has been used
         if (country != null && !country.equals("none")) {
@@ -93,6 +94,7 @@ public class Hyphenator {
      * @return a hyphenation tree
      */
     public static HyphenationTree getResourceHyphenationTree(String key) {
+        System.out.println("TEST");
         try {
             InputStream stream = BaseFont.getResourceStream(defaultHyphLocation + key + ".xml");
             if (stream == null && key.length() > 2) {
@@ -114,6 +116,7 @@ public class Hyphenator {
      * @return a hyphenation tree
      */
     public static HyphenationTree getFileHyphenationTree(String key) {
+        System.out.println("TEST");
         try {
             if (hyphenDir == null) {
                 return null;
@@ -151,6 +154,7 @@ public class Hyphenator {
     public static Hyphenation hyphenate(String lang, String country,
             String word, int leftMin,
             int rightMin) {
+        System.out.println("TEST");
         HyphenationTree hTree = getHyphenationTree(lang, country);
         if (hTree == null) {
             //log.error("Error building hyphenation tree for language "
@@ -173,6 +177,7 @@ public class Hyphenator {
     public static Hyphenation hyphenate(String lang, String country,
             char[] word, int offset, int len,
             int leftMin, int rightMin) {
+        System.out.println("TEST");
         HyphenationTree hTree = getHyphenationTree(lang, country);
         if (hTree == null) {
             //log.error("Error building hyphenation tree for language "

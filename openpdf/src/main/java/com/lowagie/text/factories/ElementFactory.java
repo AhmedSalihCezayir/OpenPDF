@@ -92,6 +92,7 @@ public class ElementFactory {
      * @return a Chunk
      */
     public static Chunk getChunk(Properties attributes) {
+        System.out.println("TEST");
         Chunk chunk = new Chunk();
 
         chunk.setFont(FontFactory.getFont(attributes));
@@ -150,6 +151,7 @@ public class ElementFactory {
      * @return a Phrase
      */
     public static Phrase getPhrase(Properties attributes) {
+        System.out.println("TEST");
         Phrase phrase = new Phrase();
         phrase.setFont(FontFactory.getFont(attributes));
         String value;
@@ -180,6 +182,7 @@ public class ElementFactory {
      * @return an Anchor
      */
     public static Anchor getAnchor(Properties attributes) {
+        System.out.println("TEST");
         Anchor anchor = new Anchor(getPhrase(attributes));
         String value;
         value = attributes.getProperty(ElementTags.NAME);
@@ -200,6 +203,7 @@ public class ElementFactory {
      * @return a Paragraph
      */
     public static Paragraph getParagraph(Properties attributes) {
+        System.out.println("TEST");
         Paragraph paragraph = new Paragraph(getPhrase(attributes));
         String value;
         value = attributes.getProperty(ElementTags.ALIGN);
@@ -235,6 +239,7 @@ public class ElementFactory {
      * @return the List
      */
     public static List getList(Properties attributes) {
+        System.out.println("TEST");
         List list = new List();
 
         list.setNumbered(Utilities.checkTrueOrFalse(attributes,

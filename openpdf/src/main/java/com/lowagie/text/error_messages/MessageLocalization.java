@@ -150,6 +150,7 @@ public final class MessageLocalization {
      * @return the message
      */
     public static String getComposedMessage(String key, Object p1, Object p2) {
+        System.out.println("TEST");
         return getComposedMessage(key, p1, p2, null, null);
     }
 
@@ -164,6 +165,7 @@ public final class MessageLocalization {
      * @return the message
      */
     public static String getComposedMessage(String key, Object p1, Object p2, Object p3) {
+        System.out.println("TEST");
         return getComposedMessage(key, p1, p2, p3, null);
     }
 
@@ -179,6 +181,7 @@ public final class MessageLocalization {
      * @return the message
      */
     public static String getComposedMessage(String key, Object p1, Object p2, Object p3, Object p4) {
+        System.out.println("TEST");
         String msg = getMessage(key);
         if (p1 != null) {
             msg = msg.replace("{1}", p1.toString());
@@ -205,6 +208,7 @@ public final class MessageLocalization {
      * @throws IOException on error
      */
     public static boolean setLanguage(String language, String country) throws IOException {
+        System.out.println("TEST");
         Map<String, String> lang = getLanguageMessages(language, country);
         if (lang == null) {
             return false;
@@ -224,6 +228,7 @@ public final class MessageLocalization {
     }
 
     private static Map<String, String> getLanguageMessages(String language, String country) throws IOException {
+        System.out.println("TEST");
         if (language == null) {
             throw new IllegalArgumentException("The language cannot be null.");
         }

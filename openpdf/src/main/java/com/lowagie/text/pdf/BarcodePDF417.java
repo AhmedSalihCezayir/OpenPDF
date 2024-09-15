@@ -633,6 +633,7 @@ public class BarcodePDF417 {
     }
 
     private static int getTextTypeAndValue(byte[] input, int maxLength, int idx) {
+        System.out.println("TEST");
         if (idx >= maxLength) {
             return 0;
         }
@@ -661,6 +662,7 @@ public class BarcodePDF417 {
     }
 
     protected static int maxPossibleErrorLevel(int remain) {
+        System.out.println("TEST");
         int level = 8;
         int size = 512;
         while (level > 0) {
@@ -680,6 +682,7 @@ public class BarcodePDF417 {
      * @see #setMacroSegmentCount(int)
      */
     public void setMacroSegmentId(int id) {
+        System.out.println("TEST");
         this.macroSegmentId = id;
     }
 
@@ -699,6 +702,7 @@ public class BarcodePDF417 {
      * @param id the file id
      */
     public void setMacroFileId(String id) {
+        System.out.println("TEST");
         this.macroFileId = id;
     }
 
@@ -729,6 +733,7 @@ public class BarcodePDF417 {
     }
 
     protected void outCodeword17(int codeword) {
+        System.out.println("TEST");
         int bytePtr = bitPtr / 8;
         int bit = bitPtr - bytePtr * 8;
         outBits[bytePtr++] |= codeword >> (9 + bit);

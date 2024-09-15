@@ -194,6 +194,7 @@ class FontDetails {
      * @return the <CODE>BaseFont</CODE> of this font
      */
     BaseFont getBaseFont() {
+        System.out.println("TEST");
         return baseFont;
     }
 
@@ -205,6 +206,7 @@ class FontDetails {
      * @return the conversion
      */
     byte[] convertToBytes(String text, TextRenderingOptions options) {
+        System.out.println("TEST");
         byte[] b = null;
         switch (fontType) {
             case BaseFont.FONT_TYPE_T3:
@@ -272,6 +274,7 @@ class FontDetails {
     }
 
     private byte[] convertToBytesWithGlyphs(String text) {
+        System.out.println("TEST");
         int len = text.length();
         int[] metrics = null;
         int[] glyph = new int[len];
@@ -297,6 +300,7 @@ class FontDetails {
     }
 
     private byte[] getCJKEncodingBytes(int[] glyph, int size) {
+        System.out.println("TEST");
         byte[] result = new byte[size * 2];
         for (int i = 0; i < size; i++) {
             int g = glyph[i];
@@ -314,6 +318,7 @@ class FontDetails {
      * @see <CODE>convertToBytes(GlyphVector glyphVector,...)</CODE>
      */
     byte[] convertToBytes(final List<Integer> glyphCodes) {
+        System.out.println("TEST");
         if (fontType != BaseFont.FONT_TYPE_TTUNI) {
             throw new UnsupportedOperationException("Only supported for True Type Unicode fonts");
         }

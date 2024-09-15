@@ -99,6 +99,7 @@ public class MappedRandomAccessFile implements AutoCloseable {
      * @return boolean true on success
      */
     public static boolean clean(final java.nio.ByteBuffer buffer) {
+        System.out.println("TEST");
         if (buffer == null || !buffer.isDirect()) {
             return false;
         }
@@ -107,6 +108,7 @@ public class MappedRandomAccessFile implements AutoCloseable {
     }
 
     private static boolean cleanJava11(final ByteBuffer buffer) {
+        System.out.println("TEST");
         Boolean success = Boolean.FALSE;
         try {
             MethodHandles.Lookup lookup = MethodHandles.lookup();
@@ -132,7 +134,7 @@ public class MappedRandomAccessFile implements AutoCloseable {
      */
     private void init(FileChannel channel, FileChannel.MapMode mapMode)
             throws IOException {
-
+        System.out.println("TEST");            
         if (channel.size() > Integer.MAX_VALUE) {
             throw new PdfException("The PDF file is too large. Max 2GB. Size: " + channel.size());
         }
@@ -147,6 +149,7 @@ public class MappedRandomAccessFile implements AutoCloseable {
      * @since 2.0.8
      */
     public FileChannel getChannel() {
+        System.out.println("TEST");
         return channel;
     }
 
@@ -155,6 +158,7 @@ public class MappedRandomAccessFile implements AutoCloseable {
      * @see java.io.RandomAccessFile#read()
      */
     public int read() {
+        System.out.println("TEST");
         try {
             byte b = mappedByteBuffer.get();
             int n = b & 0xff;

@@ -108,6 +108,7 @@ public class PdfCopy extends PdfWriter {
      * @param rotateContents New value of property rotateContents.
      */
     public void setRotateContents(boolean rotateContents) {
+        System.out.println("TEST");
         this.rotateContents = rotateContents;
     }
 
@@ -119,6 +120,7 @@ public class PdfCopy extends PdfWriter {
      * @return the page
      */
     public PdfImportedPage getImportedPage(PdfReader reader, int pageNumber) {
+        System.out.println("TEST");
         if (currentPdfReaderInstance != null) {
             if (currentPdfReaderInstance.getReader() != reader) {
                 try {
@@ -147,6 +149,7 @@ public class PdfCopy extends PdfWriter {
      * @throws BadPdfFormatException on error with the Pdf format
      */
     protected PdfIndirectReference copyIndirect(PRIndirectReference in) throws IOException, BadPdfFormatException {
+        System.out.println("TEST");
         PdfIndirectReference theRef;
         RefKey key = new RefKey(in);
         IndirectReferences iRef = indirects.get(key);
@@ -183,6 +186,7 @@ public class PdfCopy extends PdfWriter {
      */
     protected PdfDictionary copyDictionary(PdfDictionary in)
             throws IOException, BadPdfFormatException {
+        System.out.println("TEST");
         PdfDictionary out = new PdfDictionary();
         PdfObject type = PdfReader.getPdfObjectRelease(in.get(PdfName.TYPE));
 
@@ -209,6 +213,7 @@ public class PdfCopy extends PdfWriter {
      * @throws BadPdfFormatException on error with the Pdf format
      */
     protected PdfStream copyStream(PRStream in) throws IOException, BadPdfFormatException {
+        System.out.println("TEST");
         PRStream out = new PRStream(in, null);
 
         for (PdfName key : in.getKeys()) {

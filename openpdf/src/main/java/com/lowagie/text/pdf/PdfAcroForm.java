@@ -114,6 +114,7 @@ public class PdfAcroForm extends PdfDictionary {
      */
 
     public void addDocumentField(PdfIndirectReference ref) {
+        System.out.println("TEST");
         documentFields.add(ref);
     }
 
@@ -124,6 +125,7 @@ public class PdfAcroForm extends PdfDictionary {
      */
 
     public boolean isValid() {
+        System.out.println("TEST");
         if (documentFields.size() == 0) {
             return false;
         }
@@ -158,6 +160,7 @@ public class PdfAcroForm extends PdfDictionary {
      */
 
     public void addCalculationOrder(PdfFormField formField) {
+        System.out.println("TEST");
         calculationOrder.add(formField.getIndirectReference());
     }
 
@@ -168,6 +171,7 @@ public class PdfAcroForm extends PdfDictionary {
      */
 
     public void setSigFlags(int f) {
+        System.out.println("TEST");
         sigFlags |= f;
     }
 
@@ -196,6 +200,7 @@ public class PdfAcroForm extends PdfDictionary {
      */
     public PdfFormField addHtmlPostButton(String name, String caption, String value, String url, BaseFont font,
             float fontSize, float llx, float lly, float urx, float ury) {
+        System.out.println("TEST");
         PdfAction action = PdfAction.createSubmitForm(url, null, PdfAction.SUBMIT_HTML_FORMAT);
         PdfFormField button = new PdfFormField(writer, llx, lly, urx, ury, action);
         setButtonParams(button, PdfFormField.FF_PUSHBUTTON, name, value);

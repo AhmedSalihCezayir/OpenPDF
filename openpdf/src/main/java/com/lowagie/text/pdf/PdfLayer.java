@@ -117,6 +117,7 @@ public class PdfLayer extends PdfDictionary implements PdfOCG {
      * @param child the child layer
      */
     public void addChild(PdfLayer child) {
+        System.out.println("TEST");
         if (child.parent != null) {
             String name = null;
             PdfString pdfName = child.getAsString(PdfName.NAME);
@@ -140,6 +141,7 @@ public class PdfLayer extends PdfDictionary implements PdfOCG {
      * @return the parent layer or <CODE>null</CODE> if the layer has no parent
      */
     public PdfLayer getParent() {
+        System.out.println("TEST");
         return parent;
     }
 
@@ -168,6 +170,7 @@ public class PdfLayer extends PdfDictionary implements PdfOCG {
      * @since 2.1.2
      */
     void setRef(PdfIndirectReference ref) {
+        System.out.println("TEST");
         this.ref = ref;
     }
 
@@ -177,6 +180,7 @@ public class PdfLayer extends PdfDictionary implements PdfOCG {
      * @param name the name of this layer
      */
     public void setName(String name) {
+        System.out.println("TEST");
         put(PdfName.NAME, new PdfString(name, PdfObject.TEXT_UNICODE));
     }
 
@@ -208,6 +212,7 @@ public class PdfLayer extends PdfDictionary implements PdfOCG {
     }
 
     private PdfDictionary getUsage() {
+        System.out.println("TEST");
         PdfDictionary usage = (PdfDictionary) get(PdfName.USAGE);
         if (usage == null) {
             usage = new PdfDictionary();

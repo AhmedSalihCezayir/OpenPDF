@@ -319,6 +319,7 @@ public class PdfAction extends PdfDictionary {
      */
     public static PdfAction rendition(String file, PdfFileSpecification fs, String mimeType, PdfIndirectReference ref)
             throws IOException {
+        System.out.println("TEST");
         PdfAction js = new PdfAction();
         js.put(PdfName.S, PdfName.RENDITION);
         js.put(PdfName.R, new PdfRendition(file, fs, mimeType));
@@ -338,6 +339,7 @@ public class PdfAction extends PdfDictionary {
      * @return the JavaScript action
      */
     public static PdfAction javaScript(String code, PdfWriter writer, boolean unicode) {
+        System.out.println("TEST");
         PdfAction js = new PdfAction();
         js.put(PdfName.S, PdfName.JAVASCRIPT);
         if (unicode && code.length() < 50) {
@@ -367,6 +369,7 @@ public class PdfAction extends PdfDictionary {
      * @return the JavaScript action
      */
     public static PdfAction javaScript(String code, PdfWriter writer) {
+        System.out.println("TEST");
         return javaScript(code, writer, false);
     }
 
@@ -378,6 +381,7 @@ public class PdfAction extends PdfDictionary {
      * @return a Hide Action
      */
     static PdfAction createHide(PdfObject obj, boolean hide) {
+        System.out.println("TEST");
         PdfAction action = new PdfAction();
         action.put(PdfName.S, PdfName.HIDE);
         action.put(PdfName.T, obj);
@@ -395,6 +399,7 @@ public class PdfAction extends PdfDictionary {
      * @return A Hide Action
      */
     public static PdfAction createHide(PdfAnnotation annot, boolean hide) {
+        System.out.println("TEST");
         return createHide(annot.getIndirectReference(), hide);
     }
 

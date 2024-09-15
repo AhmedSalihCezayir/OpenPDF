@@ -92,6 +92,7 @@ public class ElementFactory {
      * @return a Chunk
      */
     public static Chunk getChunk(Properties attributes) {
+        System.out.println("TEST");
         Chunk chunk = new Chunk();
 
         chunk.setFont(FontFactory.getFont(attributes));

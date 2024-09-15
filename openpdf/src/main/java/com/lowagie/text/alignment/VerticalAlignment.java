@@ -38,6 +38,7 @@ public enum VerticalAlignment {
      * @see Element#ALIGN_BASELINE
      */
     public static Optional<VerticalAlignment> of(final int id) {
+        System.out.println("TEST");
         for (final VerticalAlignment alignment : values()) {
             if (alignment.id == id) {
                 return Optional.of(alignment);
